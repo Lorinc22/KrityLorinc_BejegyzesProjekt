@@ -21,5 +21,27 @@ public class Bejegyzes
         this.szerkesztveBool = false;
 
     }
+    public String getSzerzo(String szerzo)
+    {
+        return this.szerzo;
+    }
+
+    public String getTartalom()
+    {
+        return this.tartalom;
+    }
+
+    public  void setTartalom(String tartalom)
+    {
+        this.tartalom = tartalom;
+        this.szerkesztve = LocalDateTime.now();
+        this.szerkesztveBool = true;
+    }
+
+    public int getLikeok()
+    {
+        return this.likeok;
+    }
+
 
 }
