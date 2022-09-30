@@ -42,6 +42,32 @@ public class Bejegyzes
     {
         return this.likeok;
     }
+    public LocalDateTime getLetrejott()
+    {
+        return this.letrejott;
+    }
+
+    public LocalDateTime getSzerkesztve()
+    {
+        return this.szerkesztve;
+    }
 
 
+    public void like()
+    {
+        this.likeok ++;
+    }
+
+    @Override
+    public String toString()
+    {
+        if (szerkesztveBool == true)
+        {
+            return  String.format("\n%s - %d - %s\nSzerkeztve: %s\n%s\n", this.szerzo, this.likeok, this.letrejott, this.szerkesztve, this.tartalom);
+        }
+        else
+        {
+            return  String.format("\n%s - %d - %s\n%s\n", this.szerzo, this.likeok, this.letrejott, this.tartalom);
+        }
+    }
 }
